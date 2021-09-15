@@ -71,6 +71,22 @@
 </tr>
 </table>
 
+<hr>
+<h3>Graphs Traversal/connected/shortest paths</h3>
+<blockquote> It's the only work with graphs that have positive weights. This is because, during the process, the weights of the edges have to be added to find the shortest path.If there is a negative weight in the graph, then the algorithm will not work properly. Once a node has been marked as "visited", the current path to that node is marked as the shortest path to reach that node. And negative weights can alter this if the total weight can be decremented after this step has occurred.</blockquote>
+<a href="https://www.freecodecamp.org/news/dijkstras-shortest-path-algorithm-visual-introduction/">Source</a> <br><br>
+<pre>if (!used[u]) {
+    cout << "No path!";
+} else {
+    vector<int> path;
+    for (int v = u; v != -1; v = p[v])
+        path.push_back(v);
+    reverse(path.begin(), path.end());
+    cout << "Path: ";
+    for (int v : path)
+        cout << v << " ";
+}</pre>
+<a href="https://cp-algorithms.com/graph/breadth-first-search.html">Source</a> <br><br>
 <a href="https://github.com/44-563-WebApps-F21/webapps-f21-assignment-3-JAYANTH8084/blob/main/aboutme.html">About me</a>
 </body>
 </html>
